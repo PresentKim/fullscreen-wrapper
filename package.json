@@ -1,6 +1,6 @@
 {
     "name": "fullscreen-wrapper",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Light Wrapper for FullScreen API for cross-browser supports",
     "main": "dist/fullscreen.js",
     "types": "dist/fullscreen.d.ts",

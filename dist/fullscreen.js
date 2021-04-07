@@ -83,8 +83,8 @@ else if (document.msFullscreenEnabled) {
     fullscreen.elementProperty = "msFullscreenElement";
     fullscreen.requestMethod = "msRequestFullscreen";
     fullscreen.exitMethod = "msExitFullscreen";
-    fullscreen.changeEvent = "msfullscreenchange";
-    fullscreen.errorEvent = "msfullscreenerror";
+    fullscreen.changeEvent = "MSFullscreenChange";
+    fullscreen.errorEvent = "MSFullscreenError";
 }
 else if (document.mozFullScreenEnabled) {
     fullscreen.isEnabled = document.mozFullScreenEnabled;
