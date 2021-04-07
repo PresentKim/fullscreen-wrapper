@@ -1,0 +1,32 @@
+{
+    "name": "fullscreen.js",
+    "version": "1.0.0",
+    "description": "Light Wrapper for FullScreen API for cross-browser supports",
+    "main": "dist/fullscreen.js",
+    "types": "dist/fullscreen.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "funding": "https://www.patreon.com/PresentKim",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PresentKim/fullscreen.js.git"
+    },
+    "keywords": [
+        "html",
+        "browser",
+        "polyfill",
+        "wrapper",
+        "fullscreen",
+        "typescript"
+    ],
+    "author": "PresentKim <debe3721@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/PresentKim/fullscreen.js/issues"
+    },
+    "homepage": "https://github.com/PresentKim/fullscreen.js",
+    "devDependencies": {
+        "typescript": "^4.2.3"
+    }
+}
