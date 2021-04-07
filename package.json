@@ -1,5 +1,5 @@
 {
-    "name": "fullscreen.js",
+    "name": "fullscreen-wrapper",
     "version": "1.0.0",
     "description": "Light Wrapper for FullScreen API for cross-browser supports",
     "main": "dist/fullscreen.js",
@@ -10,7 +10,7 @@
     "funding": "https://www.patreon.com/PresentKim",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/PresentKim/fullscreen.js.git"
+        "url": "git+https://github.com/PresentKim/fullscreen-wrapper.git"
     },
     "keywords": [
         "html",
@@ -23,9 +23,9 @@
     "author": "PresentKim <debe3721@gmail.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/PresentKim/fullscreen.js/issues"
+        "url": "https://github.com/PresentKim/fullscreen-wrapper/issues"
     },
-    "homepage": "https://github.com/PresentKim/fullscreen.js",
+    "homepage": "https://github.com/PresentKim/fullscreen-wrapper",
     "devDependencies": {
         "typescript": "^4.2.3"
     }

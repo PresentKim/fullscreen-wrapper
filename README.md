@@ -1,9 +1,9 @@
-# fullscreen.js  
+# fullscreen-wrapper 
 A Light Wrapper for FullScreen API for cross-browser supports  
 ## Installation  
 ```sh  
-npm install fullscreen.js --save  
-yarn add fullscreen.js  
+npm install fullscreen-wrapper --save  
+yarn add fullscreen-wrapper 
 ```  
   
   
@@ -11,13 +11,13 @@ yarn add fullscreen.js
   
 ### Javascript  
 ````javascript  
-var fullscreen = require('fullscreen.js');  
+var fullscreen = require('fullscreen-wrapper');  
 fullscreen.require();  
 ````  
   
 ### TypeScript  
 ````typescript  
-import fullscreen from 'fullscreen.js';  
+import fullscreen from 'fullscreen-wrapper';  
 fullscreen.require();  
 ````  
   
