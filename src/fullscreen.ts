@@ -1,13 +1,28 @@
 const document = (window.document as any);
 
 class FullScreen {
+    /**
+     * Returns true if document has the ability to display elements fullscreen and fullscreen is supported, or false otherwise.
+     * @see Document.fullscreenEnabled
+     */
     public isEnabled: boolean;
+
+    /** @inner Name of element property */
     public elementProperty: string;
+
+    /** @inner Name of request method */
     public requestMethod: string;
+
+    /** @inner Name of exit method */
     public exitMethod: string;
+
+    /** @inner Name of change event */
     public changeEvent: string;
+
+    /** @inner Name of error event */
     public errorEvent: string;
 
+    /** @inner */
     constructor() {
         this.isEnabled = false;
         this.elementProperty = "";
@@ -17,14 +32,23 @@ class FullScreen {
         this.errorEvent = "";
     }
 
+    /** Returns true if document has fullscreen element, or false otherwise. */
     get isFullscreen(): boolean {
         return Boolean(this.element);
     }
 
+    /**
+     * Returns document's fullscreen element.
+     * @see Document.fullscreenElement
+     */
     get element(): Element | undefined {
         return document[this.elementProperty];
     }
 
+    /**
+     * Displays element fullscreen and resolves promise when done.
+     * @see Element.requestFullscreen()
+     */
     request(element: Element = document.documentElement): boolean {
         if (!(element as any)[this.requestMethod])
             return false;
@@ -33,6 +57,10 @@ class FullScreen {
         return true;
     }
 
+    /**
+     * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
+     * @see Element.exitFullscreen()
+     */
     exit(): boolean {
         if (!document[this.exitMethod])
             return false;
@@ -41,6 +69,7 @@ class FullScreen {
         return true;
     }
 
+    /** Appends an event listener for "fullscreenchange" event. The callback argument sets the callback that will be invoked when the event is dispatched. */
     onChange(callback: (this: Document, ev: Event) => any): boolean {
         if (!this.isEnabled)
             return false;
@@ -49,6 +78,7 @@ class FullScreen {
         return true;
     }
 
+    /** Appends an event listener for "fullscreenerror" event. The callback argument sets the callback that will be invoked when the event is dispatched. */
     onError(callback: (this: Document, ev: Event) => any): boolean {
         if (!this.isEnabled)
             return false;
@@ -57,6 +87,7 @@ class FullScreen {
         return true;
     }
 
+    /** Toggle fullscreen */
     toggle(element: Element = document.documentElement): boolean {
         return this.isFullscreen ? this.exit() : this.request(element);
     }
