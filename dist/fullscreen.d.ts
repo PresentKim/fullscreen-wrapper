@@ -25,12 +25,12 @@ declare class FullScreen {
     get element(): Element | undefined;
     /**
      * Displays element fullscreen and resolves promise when done.
-     * @see Element.requestFullscreen()
+     * @see Element.requestFullscreen
      */
     request(element?: Element): boolean;
     /**
      * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
-     * @see Element.exitFullscreen()
+     * @see Element.exitFullscreen
      */
     exit(): boolean;
     /** Appends an event listener for "fullscreenchange" event. The callback argument sets the callback that will be invoked when the event is dispatched. */

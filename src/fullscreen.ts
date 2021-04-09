@@ -47,7 +47,7 @@ class FullScreen {
 
     /**
      * Displays element fullscreen and resolves promise when done.
-     * @see Element.requestFullscreen()
+     * @see Element.requestFullscreen
      */
     request(element: Element = document.documentElement): boolean {
         if (!(element as any)[this.requestMethod])
@@ -59,7 +59,7 @@ class FullScreen {
 
     /**
      * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
-     * @see Element.exitFullscreen()
+     * @see Element.exitFullscreen
      */
     exit(): boolean {
         if (!document[this.exitMethod])

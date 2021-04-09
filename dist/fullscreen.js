@@ -32,7 +32,7 @@ var FullScreen = /** @class */ (function () {
     });
     /**
      * Displays element fullscreen and resolves promise when done.
-     * @see Element.requestFullscreen()
+     * @see Element.requestFullscreen
      */
     FullScreen.prototype.request = function (element) {
         if (element === void 0) { element = document.documentElement; }
@@ -43,7 +43,7 @@ var FullScreen = /** @class */ (function () {
     };
     /**
      * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
-     * @see Element.exitFullscreen()
+     * @see Element.exitFullscreen
      */
     FullScreen.prototype.exit = function () {
         if (!document[this.exitMethod])
