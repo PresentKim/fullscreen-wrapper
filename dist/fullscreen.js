@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var document = window.document;
 var FullScreen = /** @class */ (function () {
+    /** @inner */
     function FullScreen() {
         this.isEnabled = false;
         this.elementProperty = "";
@@ -11,6 +12,7 @@ var FullScreen = /** @class */ (function () {
         this.errorEvent = "";
     }
     Object.defineProperty(FullScreen.prototype, "isFullscreen", {
+        /** Returns true if document has fullscreen element, or false otherwise. */
         get: function () {
             return Boolean(this.element);
         },
@@ -18,12 +20,20 @@ var FullScreen = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(FullScreen.prototype, "element", {
+        /**
+         * Returns document's fullscreen element.
+         * @see Document.fullscreenElement
+         */
         get: function () {
             return document[this.elementProperty];
         },
         enumerable: false,
         configurable: true
     });
+    /**
+     * Displays element fullscreen and resolves promise when done.
+     * @see Element.requestFullscreen()
+     */
     FullScreen.prototype.request = function (element) {
         if (element === void 0) { element = document.documentElement; }
         if (!element[this.requestMethod])
@@ -31,24 +41,31 @@ var FullScreen = /** @class */ (function () {
         element[this.requestMethod]();
         return true;
     };
+    /**
+     * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
+     * @see Element.exitFullscreen()
+     */
     FullScreen.prototype.exit = function () {
         if (!document[this.exitMethod])
             return false;
         document[this.exitMethod]();
         return true;
     };
+    /** Appends an event listener for "fullscreenchange" event. The callback argument sets the callback that will be invoked when the event is dispatched. */
     FullScreen.prototype.onChange = function (callback) {
         if (!this.isEnabled)
             return false;
         document.addEventListener(this.changeEvent, callback, false);
         return true;
     };
+    /** Appends an event listener for "fullscreenerror" event. The callback argument sets the callback that will be invoked when the event is dispatched. */
     FullScreen.prototype.onError = function (callback) {
         if (!this.isEnabled)
             return false;
         document.addEventListener(this.errorEvent, callback, false);
         return true;
     };
+    /** Toggle fullscreen */
     FullScreen.prototype.toggle = function (element) {
         if (element === void 0) { element = document.documentElement; }
         return this.isFullscreen ? this.exit() : this.request(element);

@@ -1,11 +1,11 @@
 {
     "name": "fullscreen-wrapper",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Light Wrapper for FullScreen API for cross-browser supports",
-    "main": "dist/fullscreen.js",
+    "main": "dist/fullscreen.min.js",
     "types": "dist/fullscreen.d.ts",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc && uglifyjs --compress --mangle --output dist/fullscreen.min.js -- dist/fullscreen.js\n"
     },
     "funding": "https://www.patreon.com/PresentKim",
     "repository": {
@@ -27,6 +27,7 @@
     },
     "homepage": "https://github.com/PresentKim/fullscreen-wrapper",
     "devDependencies": {
-        "typescript": "^4.2.3"
+        "typescript": "^4.2.3",
+        "uglify-js": "^3.13.3"
     }
 }
