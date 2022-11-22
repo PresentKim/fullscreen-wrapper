@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@rollup/plugin-typescript", "virtual:12dd88a97b1e686d4b853a623221bfb5676f427f029e2984f2eadd2d4ec23bec059833ce9f298295b90952b38a0987fdea1a9037c166d8e0fb96d613b38a3e79#npm:9.0.2"],
+            ["prettier", "npm:2.7.1"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:3.3.0"],
             ["terser", "npm:5.15.1"],
@@ -540,6 +541,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["fullscreen-wrapper", "workspace:."],
             ["@rollup/plugin-typescript", "virtual:12dd88a97b1e686d4b853a623221bfb5676f427f029e2984f2eadd2d4ec23bec059833ce9f298295b90952b38a0987fdea1a9037c166d8e0fb96d613b38a3e79#npm:9.0.2"],
+            ["prettier", "npm:2.7.1"],
             ["rimraf", "npm:3.0.2"],
             ["rollup", "npm:3.3.0"],
             ["terser", "npm:5.15.1"],
@@ -1036,6 +1038,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/picomatch-npm-2.3.1-c782cfd986-050c865ce8.zip/node_modules/picomatch/",
           "packageDependencies": [
             ["picomatch", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prettier", [
+        ["npm:2.7.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:2.7.1"]
           ],
           "linkType": "HARD",
         }]

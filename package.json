@@ -1,41 +1,43 @@
 {
-    "name": "fullscreen-wrapper",
-    "version": "1.1.0",
-    "description": "Light Wrapper for FullScreen API for cross-browser supports",
-    "main": "dist/fullscreen.min.js",
-    "types": "dist/fullscreen.d.ts",
-    "scripts": {
-        "clean": "rimraf ./dist",
-        "build:js": "rollup -c rollup.config.js --bundleConfigAsCjs",
-        "build:minjs": "terser ./dist/fullscreen.js --compress --mangle > ./dist/fullscreen.min.js",
-        "build": "npm run clean && npm run build:js -s && npm run build:minjs"
-    },
-    "funding": "https://www.patreon.com/PresentKim",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/PresentKim/fullscreen-wrapper.git"
-    },
-    "keywords": [
-        "html",
-        "browser",
-        "polyfill",
-        "wrapper",
-        "fullscreen",
-        "typescript"
-    ],
-    "author": "PresentKim <debe3721@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/PresentKim/fullscreen-wrapper/issues"
-    },
-    "homepage": "https://github.com/PresentKim/fullscreen-wrapper",
-    "devDependencies": {
-        "@rollup/plugin-typescript": "^9.0.2",
-        "rimraf": "^3.0.2",
-        "rollup": "^3.3.0",
-        "terser": "^5.15.1",
-        "tslib": "^2.4.1",
-        "typescript": "^4.9.3"
-    },
-    "packageManager": "yarn@3.1.0"
+  "name": "fullscreen-wrapper",
+  "version": "1.1.1",
+  "description": "Light Wrapper for FullScreen API for cross-browser supports",
+  "main": "dist/fullscreen.min.js",
+  "types": "dist/fullscreen.d.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build:js": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build:minjs": "terser ./dist/fullscreen.js --compress --mangle > ./dist/fullscreen.min.js",
+    "build": "npm run clean && npm run build:js -s && npm run build:minjs",
+    "format": "prettier --write ."
+  },
+  "funding": "https://www.patreon.com/PresentKim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PresentKim/fullscreen-wrapper.git"
+  },
+  "keywords": [
+    "html",
+    "browser",
+    "polyfill",
+    "wrapper",
+    "fullscreen",
+    "typescript"
+  ],
+  "author": "PresentKim <debe3721@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PresentKim/fullscreen-wrapper/issues"
+  },
+  "homepage": "https://github.com/PresentKim/fullscreen-wrapper",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.2",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.3.0",
+    "terser": "^5.15.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3"
+  },
+  "packageManager": "yarn@3.1.0"
 }

@@ -9,11 +9,11 @@
         /** @inner */
         function FullScreen() {
             this.isEnabled = false;
-            this.elementProperty = "";
-            this.requestMethod = "";
-            this.exitMethod = "";
-            this.changeEvent = "";
-            this.errorEvent = "";
+            this.elementProperty = '';
+            this.requestMethod = '';
+            this.exitMethod = '';
+            this.changeEvent = '';
+            this.errorEvent = '';
         }
         Object.defineProperty(FullScreen.prototype, "isFullscreen", {
             /** Returns true if document has fullscreen element, or false otherwise. */
@@ -79,41 +79,41 @@
     var fullscreen = new FullScreen();
     if (document.fullscreenEnabled) {
         fullscreen.isEnabled = document.fullscreenEnabled;
-        fullscreen.elementProperty = "fullscreenElement";
-        fullscreen.requestMethod = "requestFullscreen";
-        fullscreen.exitMethod = "exitFullscreen";
-        fullscreen.changeEvent = "fullscreenchange";
-        fullscreen.errorEvent = "fullscreenerror";
+        fullscreen.elementProperty = 'fullscreenElement';
+        fullscreen.requestMethod = 'requestFullscreen';
+        fullscreen.exitMethod = 'exitFullscreen';
+        fullscreen.changeEvent = 'fullscreenchange';
+        fullscreen.errorEvent = 'fullscreenerror';
     }
     else if (document.webkitFullscreenEnabled || document.webkitCancelFullScreen) {
         fullscreen.isEnabled = document.fullscreenEnabled || Boolean(document.webkitCancelFullScreen);
-        fullscreen.requestMethod = "webkitRequestFullScreen";
-        fullscreen.changeEvent = "webkitfullscreenchange";
-        fullscreen.errorEvent = "webkitfullscreenerror";
+        fullscreen.requestMethod = 'webkitRequestFullScreen';
+        fullscreen.changeEvent = 'webkitfullscreenchange';
+        fullscreen.errorEvent = 'webkitfullscreenerror';
         if (document.webkitFullscreenEnabled) {
-            fullscreen.elementProperty = "webkitFullscreenElement";
-            fullscreen.exitMethod = "webkitExitFullscreen";
+            fullscreen.elementProperty = 'webkitFullscreenElement';
+            fullscreen.exitMethod = 'webkitExitFullscreen';
         }
         else {
-            fullscreen.elementProperty = "webkitCurrentFullScreenElement";
-            fullscreen.exitMethod = "webkitCancelFullScreen";
+            fullscreen.elementProperty = 'webkitCurrentFullScreenElement';
+            fullscreen.exitMethod = 'webkitCancelFullScreen';
         }
     }
     else if (document.msFullscreenEnabled) {
         fullscreen.isEnabled = document.msFullscreenEnabled;
-        fullscreen.elementProperty = "msFullscreenElement";
-        fullscreen.requestMethod = "msRequestFullscreen";
-        fullscreen.exitMethod = "msExitFullscreen";
-        fullscreen.changeEvent = "MSFullscreenChange";
-        fullscreen.errorEvent = "MSFullscreenError";
+        fullscreen.elementProperty = 'msFullscreenElement';
+        fullscreen.requestMethod = 'msRequestFullscreen';
+        fullscreen.exitMethod = 'msExitFullscreen';
+        fullscreen.changeEvent = 'MSFullscreenChange';
+        fullscreen.errorEvent = 'MSFullscreenError';
     }
     else if (document.mozFullScreenEnabled) {
         fullscreen.isEnabled = document.mozFullScreenEnabled;
-        fullscreen.elementProperty = "mozFullScreenElement";
-        fullscreen.requestMethod = "mozRequestFullScreen";
-        fullscreen.exitMethod = "mozCancelFullScreen";
-        fullscreen.changeEvent = "mozfullscreenchange";
-        fullscreen.errorEvent = "mozfullscreenerror";
+        fullscreen.elementProperty = 'mozFullScreenElement';
+        fullscreen.requestMethod = 'mozRequestFullScreen';
+        fullscreen.exitMethod = 'mozCancelFullScreen';
+        fullscreen.changeEvent = 'mozfullscreenchange';
+        fullscreen.errorEvent = 'mozfullscreenerror';
     }
 
     return fullscreen;
