@@ -2,7 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/fullscreen-wrapper.svg?style=flat-square)](https://www.npmjs.com/package/fullscreen-wrapper)
 [![npm license](https://img.shields.io/npm/l/fullscreen-wrapper.svg?style=flat-square)](https://www.npmjs.com/package/fullscreen-wrapper)
 [![npm downloads](https://img.shields.io/npm/dt/fullscreen-wrapper.svg?style=flat-square)](https://www.npmjs.com/package/fullscreen-wrapper)
-[![bundlee size](https://img.shields.io/bundlephobia/min/fullscreen-wrapper.svg?style=flat-square)]()
+[![bundlee size](https://img.shields.io/bundlephobia/min/fullscreen-wrapper.svg?style=flat-square)](https://bundlephobia.com/package/fullscreen-wrapper)
 
 A Light Wrapper for FullScreen API for cross-browser supports
 
