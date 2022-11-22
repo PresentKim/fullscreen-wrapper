@@ -1,5 +1,7 @@
-.src/
-.yarn/
-.node_modules/
+/./
 
-.yarnrc.yml
+!/dist/
+
+!LICENSE
+!README.md
+!package.json
