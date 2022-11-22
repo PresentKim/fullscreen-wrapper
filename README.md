@@ -1,4 +1,8 @@
 # fullscreen-wrapper
+![npm version](https://img.shields.io/npm/v/fullscreen-wrapper.svg?style=flat-square)
+![npm license](https://img.shields.io/npm/l/fullscreen-wrapper.svg?style=flat-square)
+![npm downloads](https://img.shields.io/npm/dt/fullscreen-wrapper.svg?style=flat-square)
+![bundlee size](https://img.shields.io/bundlephobia/min/fullscreen-wrapper.svg?style=flat-square)
 
 A Light Wrapper for FullScreen API for cross-browser supports
 
